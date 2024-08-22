@@ -13,17 +13,3 @@ def my_decorator(a_function_to_decorate):
 
     return wrapper
 
-def my_function():
-   print("Я - оборачиваемая функция!")
-   return 0
-
-print(my_function())
-# Я - оборачиваемая функция!
-# 0
-
-decorated_function = my_decorator(my_function)  # декорирование функции
-print(decorated_function())
-# Я буду выполнен до основного вызова!
-# Я - оборачиваемая функция!
-# Я буду выполнен после основного вызова!
-# 0
